@@ -62,7 +62,6 @@ aside {
     color: var(--app-red);
 }
 
-/* Form */
 form {
     margin-top: 40px;
 }
@@ -97,9 +96,9 @@ input[type=button] {
 }
 
 input[type=button]:hover {
-    /* transform: translate(1opx, 5px); horizontal, vertical */
-    transform: translateY(-5px); /* movs vertically up by 5px upon hover */
+    transform: translateY(-5px); 
 }
+
 .fa-user {
     color: var(--app-purple);
     font-size: 30px;
@@ -116,7 +115,6 @@ dialog {
 }
 
 dialog::backdrop {
-    /* background-color: rgb(255 153 0 / 50%); */
     backdrop-filter: saturate(180%) blur(20px);
 }
 
