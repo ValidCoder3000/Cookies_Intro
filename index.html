@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Navjot Kaur">
+        <meta name="description" content="My first web page">
+        <meta name="keywords" content="html, css, web, web development, javascript">
+        <link rel="icon" href="./assets/media/favicon.png?v=2" type="image/x-icon">
+        <link rel="stylesheet" href="./assets/style/index.css" media="all"> 
+        <title>My Second API related assignment</title>
+    </head>
+    <body>
+        <main>
+            <div class="container">
+                <h1>Pseudo Classes</h1>
+                <aside>
+                    <article>
+                        <p>
+                            A CSS pseudo-class is a keyword added to a selector that specifies a special state of the selected element(s). For example, <span class="orange">:hover</span> can be used to change a button's color when the user's pointer hovers over it.
+                        </p>
+                        <p>
+                            Pseudo Classes let you apply a style to an element not only in relation to the content of the document tree, but also in relation to external factors like the history of the navigator.
+                            (<span class="green">:visited</span>, for example), the status of its content (<span class="green">:checked</span> on certain form elements), or the position of mouse (<span class="orange">:hover</span>).
+                        </p>
+                    </article>
+                    <div class="list">
+                        <nav>
+                            <ul>
+                                <li><p>List Items</p></li>
+                                <li>List Items</li>
+                                <li><p>List Items</p></li>
+                                <li>List Items</li>
+                                <li><p>List Items</p></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </aside>
+            </div>
+            <dialog>
+                 <h2>Cookies</h2>
+                 <p>
+                    We use cookies to imporve your experience on our website. By clicking "Accept", you agree to the use of cookies for marketing and analytical purposes.
+                 </p>
+                 <br><br>
+                 <div class="conditionalButtons">
+                    <button id="accept">Accept</button>
+                    <button id="settings">Settings</button>
+                 </div>
+            </dialog>
+            <dialog> 
+                <div class="settings-box">
+                    <h2>Settings</h2>
+
+                    <div class="setting-item">
+                    <span>Browser</span>
+                    <label class="toggle">
+                        <input type="checkbox" id="browserToggle" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="setting-item">
+                    <span>Operating System</span>
+                    <label class="toggle">
+                        <input type="checkbox" id="osToggle" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="setting-item">
+                    <span>Screen width</span>
+                    <label class="toggle">
+                        <input type="checkbox" id="widthToggle" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="setting-item">
+                    <span>Screen height</span>
+                    <label class="toggle">
+                        <input type="checkbox" id="heightToggle" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+            </dialog>
+            <script src="./assets/script/app.js" defer></script>
+        </main>
+    </body>
+</html>
