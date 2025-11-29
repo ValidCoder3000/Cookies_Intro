@@ -8,22 +8,9 @@ setTimeout(() => {
     console.log(`Cookies after 18 seconds: ${document.cookie}`);
 }, 18000);
 
-document.cookie = `Name=Emmanuel; path=/; expires=${utcDate}, SameSite=Lax`;
-function setCookie(name, value, maxAge) {
-    const options = {
-        path: '/',
-        SameSite: 'Lax'
-    };
-
-    if (maxAge) {
-        options.maxAge = maxAge; 
-    }
-
+function setCookie(name, value) {
 
     let cookieString = `${encodeURIComponent(name)}=${encodeURIComponent(value)}`;
-    for (let option in options) {
-        cookieString += `; ${option}=${options[option]}`;
-    }
 
     document.cookie = cookieString;
 }
@@ -79,15 +66,11 @@ function getOS() {
     return "Unknown OS";
 }
 
+
+
 function getScreenDimensions(){
     return `width:${screen.width}, height: ${screen.height}` ;
 }
-
-console.log(setCookie())
-console.log(getCookie())
-console.log(getBrowser());
-console.log(getOS());
-console.log(getScreenDimensions());
 
 if (navigator.cookieEnabled) { 
     console.log("Cookies are enabled.");  
@@ -96,3 +79,10 @@ if (navigator.cookieEnabled) {
 
 const browserInfo = navigator.userAgent;
 console.log("Browser Info:", browserInfo);
+
+
+console.log(setCookie("Job", "Mathematician"))
+console.log(getCookie())
+console.log(getBrowser());
+console.log(getOS());
+console.log(getScreenDimensions());

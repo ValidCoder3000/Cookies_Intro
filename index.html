@@ -38,7 +38,7 @@
                     </div>
                 </aside>
             </div>
-            <dialog>
+            <dialog id="cookieInfoDialog">
                  <h2>Cookies</h2>
                  <p>
                     We use cookies to imporve your experience on our website. By clicking "Accept", you agree to the use of cookies for marketing and analytical purposes.
@@ -46,12 +46,12 @@
                  <br><br>
                  <div class="conditionalButtons">
                     <button id="accept">Accept</button>
-                    <button id="settings">Settings</button>
+                    <button id="openSettings">Settings</button>
                  </div>
             </dialog>
-            <dialog> 
+            <dialog id="secondSettingsDialog"> 
                 <div class="settings-box">
-                    <h2>Settings</h2>
+                    <h2>Cookie Settings</h2>
 
                     <div class="setting-item">
                     <span>Browser</span>
@@ -84,6 +84,7 @@
                         <span class="slider"></span>
                     </label>
                 </div>
+                <button id="saveSettings">Save Preferences</button>
             </div>
             </dialog>
         </main>
