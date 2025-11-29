@@ -1,0 +1,182 @@
+@charset "utf-8";
+@import "./reset.css";
+
+:root {
+    --app-bg-color: #17181f;
+    --app-red: #ff3c57;
+    --app-green: #33ab4e;
+    --app-blue: #3c57ff;
+    --app-purple: #9a67f3;
+    --app-orange: #ff833c;
+    --app-blue-hover: #364ee6;
+    --heading-size: 28px;
+    --primary-text-color: #fff;
+    --secondary-text-color: #fdf2f2;
+}
+
+.container {
+    width: min(100% - 30px, 1080px);
+    margin-inline: auto;
+}
+
+body {
+    background-color: var(--app-bg-color);
+    color: var(--secondary-text-color);
+    font-size: 22px;
+}
+
+main {
+    padding: 100px 0;
+    overflow: hidden;
+}
+
+/* Article */
+h1 {
+    font-size: var(--heading-size);
+    color: var(--primary-text-color);
+}
+
+aside {
+    margin-top: 20px;
+    display: flex;
+    gap: 6rem;
+}
+
+.orange {
+    color: var(--app-orange);
+}
+
+.green {
+    color: var(--app-green);
+}
+
+.list {
+    width: 30%;
+}
+
+.list nav ul li:has(p) {
+    color: var(--app-blue);
+}
+
+.list nav ul li:not(:has(p)) {
+    color: var(--app-red);
+}
+
+/* Form */
+form {
+    margin-top: 40px;
+}
+
+input {
+    height: 40px;
+    width: 220px;
+    padding: 0 12px;
+    line-height: 40px;
+    color: var(--secondary-text-color);
+    font-size: 16px;
+    background-color: transparent;
+    border: 1px solid rgb(127, 125, 125);
+    border-radius: 50px;
+}
+
+input[type=text] {
+    width: 220px;
+    padding: 0 12px;
+    color: var(--secondary-text-color);
+    background-color: transparent;
+    border: 1px solid rgb(127, 125, 125);
+}
+
+input[type=button] {
+    width: 100px;
+    text-align: center;
+    font-weight: 500;
+    color: var(--primary-text-color);
+    background-color: var(--app-blue);
+    transition: all 0.25s ease-in-out;
+}
+
+input[type=button]:hover {
+    /* transform: translate(1opx, 5px); horizontal, vertical */
+    transform: translateY(-5px); /* movs vertically up by 5px upon hover */
+}
+.fa-user {
+    color: var(--app-purple);
+    font-size: 30px;
+}
+
+dialog {
+    width: 310px;
+    padding: 20px 25px;
+    border-radius: 5px;
+    margin: auto;
+    outline: none;
+    border-style: none;
+    animation: anim 0.25s linear
+}
+
+dialog::backdrop {
+    /* background-color: rgb(255 153 0 / 50%); */
+    backdrop-filter: saturate(180%) blur(20px);
+}
+
+@keyframes anim {
+    from {
+        opacity: 0;
+        translate: 0 -8px;
+    } to {
+        opacity: 1;
+        translate: 0 0;
+    }
+}
+
+.slider {
+    position: absolute;
+    top: 0; left: 0;
+    right: 0; bottom: 0;
+    background-color: #ccc;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.slider:before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    left: 2px;
+    top: 2px;
+    background: white;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+input:checked + .slider {
+    background: #6a00ff;
+}
+
+input:checked + .slider:before {
+    transform: translateX(23px);
+}
+
+.conditionalButtons {
+    display: flex;
+    flex-direction: row;
+}
+
+#accept {
+    padding: 10px;
+    color: white;
+    background-color: blue;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+#settings {
+    padding: 10px;
+    color: blue;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 50%;
+    border-color: black;
+}

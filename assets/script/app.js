@@ -1,7 +1,7 @@
 'use strict';
 
 const date = new Date();
-date.setSeconds(date.getSeconds() + 18); // 18 seconds in the future
+date.setSeconds(date.getSeconds() + 18);
 let utcDate = date.toUTCString();
 
 setTimeout(() => {
